@@ -154,7 +154,7 @@ class TestViewController: UIViewController {
         timeFormatter.dateFormat = "hh:mm a"
 
         let test = Test()
-        test.formula = "\(formula) \(answerValue)"
+        test.formula = "\(formula) \(answerValue) :: \(result)"
         test.isCorrect = answerValue == result
         test.dateString = dateFormatter.string(from: currentDate)
         test.timeString = timeFormatter.string(from: currentDate)

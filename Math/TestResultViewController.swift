@@ -58,7 +58,7 @@ extension TestResultViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let test = filteredTest[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell")
-        cell?.textLabel?.text = "[\(test.formula)]   [Time: \(test.timeString)]  [Spent: \(Int(test.timeSpent))] - [IsCorrect: \(test.isCorrect)]"
+        cell?.textLabel?.text = "[\(test.formula)]\t\t[Time: \(test.timeString)]\t\t[Spent: \(Int(test.timeSpent))]"
         
         cell?.backgroundColor = test.isCorrect ? .clear : .red
         
