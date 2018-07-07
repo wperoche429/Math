@@ -18,7 +18,9 @@
 		22B6AF9420DF553700C6D24C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9320DF553700C6D24C /* Test.swift */; };
 		22B6AF9620DF59F000C6D24C /* DateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9520DF59F000C6D24C /* DateResultViewController.swift */; };
 		22B6AF9820DF5EBB00C6D24C /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */; };
+		22BEC82D20F07B65009F7EFE /* ComparisonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */; };
 		22C9188520DE074300651E2F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9188420DE074300651E2F /* StartViewController.swift */; };
+		22CC0A1720F078D700F75A18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC0A1620F078D700F75A18 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,9 @@
 		22B6AF9320DF553700C6D24C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		22B6AF9520DF59F000C6D24C /* DateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResultViewController.swift; sourceTree = "<group>"; };
 		22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonViewController.swift; sourceTree = "<group>"; };
 		22C9188420DE074300651E2F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		22CC0A1620F078D700F75A18 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		832852561697557C9C638B11 /* Pods-Math.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Math/Pods-Math.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A2004D454A82DF7399BA03 /* Pods-Math.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math.release.xcconfig"; path = "Pods/Target Support Files/Pods-Math/Pods-Math.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,8 @@
 				22C9188420DE074300651E2F /* StartViewController.swift */,
 				22B6AF9520DF59F000C6D24C /* DateResultViewController.swift */,
 				22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */,
+				22CC0A1620F078D700F75A18 /* HomeViewController.swift */,
+				22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */,
 				22A48D5A20DDE25B000DC746 /* Main.storyboard */,
 				22A48D5D20DDE25C000DC746 /* Assets.xcassets */,
 				22A48D5F20DDE25C000DC746 /* LaunchScreen.storyboard */,
@@ -241,7 +247,9 @@
 				22A48D5920DDE25B000DC746 /* TestViewController.swift in Sources */,
 				22A48D5720DDE25B000DC746 /* AppDelegate.swift in Sources */,
 				22B6AF9220DF54F000C6D24C /* ResultManager.swift in Sources */,
+				22CC0A1720F078D700F75A18 /* HomeViewController.swift in Sources */,
 				22B6AF9420DF553700C6D24C /* Test.swift in Sources */,
+				22BEC82D20F07B65009F7EFE /* ComparisonViewController.swift in Sources */,
 				22B6AF9620DF59F000C6D24C /* DateResultViewController.swift in Sources */,
 				22B6AF9820DF5EBB00C6D24C /* TestResultViewController.swift in Sources */,
 			);

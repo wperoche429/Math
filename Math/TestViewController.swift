@@ -35,7 +35,7 @@ class TestViewController: UIViewController {
         textLabel.text = ""
         answerTextField.delegate = self
         nextAction()
-        timer = Timer.scheduledTimer(timeInterval: 60 * 60, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
