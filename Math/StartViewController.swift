@@ -45,7 +45,7 @@ class StartViewController : UIViewController {
     @IBAction func startAction() {
         var value = [Int]()
         var operation = [String]()
-        for i in 1...9 {
+        for i in 1...10 {
             if let button = view.viewWithTag(i) as? UIButton {
                 if button.isSelected {
                     value.append(i)
