@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C249D81148CE77307CF2FE1 /* Pods_Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D58D4B350BD094FAA09706 /* Pods_Math.framework */; };
+		2205B4F320F086F1000D6B7F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205B4F220F086F1000D6B7F /* BaseViewController.swift */; };
+		2205B4F520F088B6000D6B7F /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205B4F420F088B6000D6B7F /* ClockViewController.swift */; };
 		22A48D5720DDE25B000DC746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A48D5620DDE25B000DC746 /* AppDelegate.swift */; };
 		22A48D5920DDE25B000DC746 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A48D5820DDE25B000DC746 /* TestViewController.swift */; };
 		22A48D5C20DDE25B000DC746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A48D5A20DDE25B000DC746 /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		03D58D4B350BD094FAA09706 /* Pods_Math.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2205B4F220F086F1000D6B7F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2205B4F420F088B6000D6B7F /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		226E589220F08D3C00E63421 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		22A48D5320DDE25B000DC746 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A48D5620DDE25B000DC746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22A48D5820DDE25B000DC746 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				22A48D6820DDE58E000DC746 /* SequenceExtension.swift */,
+				226E589220F08D3C00E63421 /* BridgingHeader.h */,
 				22A48D5620DDE25B000DC746 /* AppDelegate.swift */,
 				22B6AF9120DF54F000C6D24C /* ResultManager.swift */,
 				22B6AF9320DF553700C6D24C /* Test.swift */,
@@ -87,6 +93,8 @@
 				22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */,
 				22CC0A1620F078D700F75A18 /* HomeViewController.swift */,
 				22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */,
+				2205B4F220F086F1000D6B7F /* BaseViewController.swift */,
+				2205B4F420F088B6000D6B7F /* ClockViewController.swift */,
 				22A48D5A20DDE25B000DC746 /* Main.storyboard */,
 				22A48D5D20DDE25C000DC746 /* Assets.xcassets */,
 				22A48D5F20DDE25C000DC746 /* LaunchScreen.storyboard */,
@@ -189,11 +197,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Math/Pods-Math-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMAnalogClock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -244,6 +254,8 @@
 			files = (
 				22A48D6920DDE58E000DC746 /* SequenceExtension.swift in Sources */,
 				22C9188520DE074300651E2F /* StartViewController.swift in Sources */,
+				2205B4F320F086F1000D6B7F /* BaseViewController.swift in Sources */,
+				2205B4F520F088B6000D6B7F /* ClockViewController.swift in Sources */,
 				22A48D5920DDE25B000DC746 /* TestViewController.swift in Sources */,
 				22A48D5720DDE25B000DC746 /* AppDelegate.swift in Sources */,
 				22B6AF9220DF54F000C6D24C /* ResultManager.swift in Sources */,

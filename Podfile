@@ -7,5 +7,6 @@ target 'Math' do
 
   # Pods for Math
 pod 'RealmSwift'
+pod 'BEMAnalogClock'
 
 end

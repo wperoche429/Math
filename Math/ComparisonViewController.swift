@@ -8,37 +8,20 @@
 
 import UIKit
 
-class ComparisonViewController : UIViewController {
+class ComparisonViewController : BaseViewController {
     
     @IBOutlet var formulaLabel: UILabel!
     @IBOutlet var responseLabel: UILabel!
     var leftNum = 0
     var rightNum = 0
     var answer = ""
-    
-    var date = Date()
-    var timer : Timer?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         formulaLabel.text = ""
         responseLabel.text = ""
         
-        timer = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
-        
         compare()
-    }
-    
-    @objc func finishAction() {
-        let alertController = UIAlertController(title: "Finish", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        let saveAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { [unowned self] alert -> Void in
-            self.navigationController?.popViewController(animated: true)
-            return
-            
-        })
-        
-        alertController.addAction(saveAction)
-        self.present(alertController, animated: true, completion: nil)
     }
     
     @objc func compare() {
@@ -72,11 +55,7 @@ class ComparisonViewController : UIViewController {
         }
         
         let currentDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "hh:mm a"
-        
+
         let test = Test()
         test.formula = "\(formulaLabel.text!) \(input) :: \(answer)"
         test.isCorrect = input == answer

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TestViewController: UIViewController {
+class TestViewController: BaseViewController {
 
 
     @IBOutlet var answerLabel: UILabel!
@@ -25,8 +25,6 @@ class TestViewController: UIViewController {
     var randomSecond = [Int]()
     var randomOperator = [String]()
     var formula = ""
-    var date = Date()
-    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,35 +33,8 @@ class TestViewController: UIViewController {
         textLabel.text = ""
         answerTextField.delegate = self
         nextAction()
-        timer = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if let _ = timer {
-            timer?.invalidate()
-            timer = nil
-        }
-    }
-
-    
-    @objc func finishAction() {
-        let alertController = UIAlertController(title: "Finish", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        let saveAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { [unowned self] alert -> Void in
-            self.navigationController?.popViewController(animated: true)
-            return
-            
-        })
-        
-        alertController.addAction(saveAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func nextAction() {
         date = Date()
         answerTextField.text = ""
@@ -148,10 +119,6 @@ class TestViewController: UIViewController {
         }
         
         let currentDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "hh:mm a"
 
         let test = Test()
         test.formula = "\(formula) \(answerValue) :: \(result)"
@@ -173,8 +140,6 @@ class TestViewController: UIViewController {
         if operationArray.count != 1 {
             randomOperator.remove(at: 0)
         }
-        
-        
         
         randomFirst.remove(at: 0)
         randomSecond.remove(at: 0)
