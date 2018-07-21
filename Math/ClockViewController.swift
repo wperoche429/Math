@@ -22,6 +22,7 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
     var currentMode = 0
     var currentHour = 0
     var currentMinute = 0
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,8 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
     }
     
     private func clockInput(minutesString : String) {
+        clock.hours = 0
+        clock.minutes = 0
         clock.hourHandColor = UIColor.blue
         clock.minuteHandColor = UIColor.blue
         clock.reloadClock()
@@ -89,6 +92,7 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
         
         answerTextField.text = "\(currentHour):\(minutesString)"
         answer = "\(currentHour):\(minutesString)"
+        clock.updateTime(animated: true)
     }
     
     @objc func textFieldActive() {
@@ -179,7 +183,12 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
     }
     
     @objc func backPage() {
-        self.navigationController?.popViewController(animated: true)
+        count += 1
+        if count == 5 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.nextAction()
+        }
     }
 }
 

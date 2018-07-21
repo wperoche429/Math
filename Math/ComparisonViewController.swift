@@ -15,6 +15,7 @@ class ComparisonViewController :  BaseViewController {
     var leftNum = 0
     var rightNum = 0
     var answer = ""
+    var count = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,7 +92,12 @@ class ComparisonViewController :  BaseViewController {
     }
     
     @objc func backPage() {
-        self.navigationController?.popViewController(animated: true)
+        count += 1
+        if count == 5 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.compare()
+        }
     }
     
 }
