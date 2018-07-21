@@ -25,6 +25,7 @@ class TestViewController: BaseViewController {
     var randomSecond = [Int]()
     var randomOperator = [String]()
     var formula = ""
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,7 +149,12 @@ class TestViewController: BaseViewController {
     }
     
     @objc func backPage() {
-        self.navigationController?.popViewController(animated: true)
+        count += 1
+        if count == 5 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.nextAction()
+        }
     }
     
     func tryAgain() {
