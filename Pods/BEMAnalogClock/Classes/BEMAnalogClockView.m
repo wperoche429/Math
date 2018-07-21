@@ -301,9 +301,15 @@
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer {
     CGPoint translation = [recognizer locationInView:self];
-    CGFloat angleInRadians = atan2f(translation.y - self.frame.size.height/2, translation.x - self.frame.size.width/2);
+//    CGFloat angleInRadians = atan2f(translation.y - self.frame.size.height/2, translation.x - self.frame.size.width/2);
     self.oldMinutes = self.minutes;
     self.minutes = ((atan2f((translation.x - self.frame.size.height/2), (translation.y - self.frame.size.width/2)) * -(180/M_PI) + 180))/6;
+    NSInteger remainder = self.minutes % 5;
+    if (remainder <= 2) {
+        self.minutes = self.minutes - remainder;
+    } else if (remainder >= 3) {
+        self.minutes = self.minutes + (5 - remainder);
+    }
     
     if (self.oldMinutes > 45 && self.minutes < 15) { // If the user drags the minute hand from 59 to 00, updates the hour on the clock.
         self.hours++;
@@ -324,7 +330,7 @@
             self.hours = 23;
         }
     }
-    self.minuteHand.transform = CGAffineTransformMakeRotation(angleInRadians + M_PI/2);
+    self.minuteHand.transform = CGAffineTransformMakeRotation(self.minutes * 6 * M_PI / 180);
     self.hourHand.transform = CGAffineTransformMakeRotation(([self degreesFromHour:self.hours andMinutes:self.minutes])*(M_PI/180));
     
     if ([self.delegate respondsToSelector:@selector(currentTimeOnClock:Hours:Minutes:Seconds:)]) {

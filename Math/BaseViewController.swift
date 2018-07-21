@@ -29,7 +29,7 @@ class BaseViewController : UIViewController {
             timer = nil
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 60 * 5, target: self, selector: #selector(finishAction), userInfo: nil, repeats: false)
         
 
     }
