@@ -120,7 +120,7 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
             
             if answerValue == answer {
                 answerLabel.text = "Correct"
-                perform(#selector(nextAction), with: nil, afterDelay: 2)
+                perform(#selector(backPage), with: nil, afterDelay: 2)
             } else {
                 tryAgain()
                 return
@@ -148,7 +148,7 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
             
             if answerValue == answer {
                 answerLabel.text = "Correct"
-                perform(#selector(nextAction), with: nil, afterDelay: 2)
+                perform(#selector(backPage), with: nil, afterDelay: 2)
             } else {
                 tryAgain()
                 return
@@ -176,6 +176,10 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.checkAction(UIBarButtonItem())
         return true
+    }
+    
+    @objc func backPage() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

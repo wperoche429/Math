@@ -20,6 +20,7 @@
 		22B6AF9420DF553700C6D24C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9320DF553700C6D24C /* Test.swift */; };
 		22B6AF9620DF59F000C6D24C /* DateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9520DF59F000C6D24C /* DateResultViewController.swift */; };
 		22B6AF9820DF5EBB00C6D24C /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */; };
+		22B9C71421033AEA00AD8087 /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9C71321033AEA00AD8087 /* DecisionViewController.swift */; };
 		22BEC82D20F07B65009F7EFE /* ComparisonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */; };
 		22C9188520DE074300651E2F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9188420DE074300651E2F /* StartViewController.swift */; };
 		22CC0A1720F078D700F75A18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC0A1620F078D700F75A18 /* HomeViewController.swift */; };
@@ -42,6 +43,7 @@
 		22B6AF9320DF553700C6D24C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		22B6AF9520DF59F000C6D24C /* DateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResultViewController.swift; sourceTree = "<group>"; };
 		22B6AF9720DF5EBA00C6D24C /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		22B9C71321033AEA00AD8087 /* DecisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionViewController.swift; sourceTree = "<group>"; };
 		22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonViewController.swift; sourceTree = "<group>"; };
 		22C9188420DE074300651E2F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		22CC0A1620F078D700F75A18 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				22BEC82C20F07B65009F7EFE /* ComparisonViewController.swift */,
 				2205B4F220F086F1000D6B7F /* BaseViewController.swift */,
 				2205B4F420F088B6000D6B7F /* ClockViewController.swift */,
+				22B9C71321033AEA00AD8087 /* DecisionViewController.swift */,
 				22A48D5A20DDE25B000DC746 /* Main.storyboard */,
 				22A48D5D20DDE25C000DC746 /* Assets.xcassets */,
 				22A48D5F20DDE25C000DC746 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 				22A48D5920DDE25B000DC746 /* TestViewController.swift in Sources */,
 				22A48D5720DDE25B000DC746 /* AppDelegate.swift in Sources */,
 				22B6AF9220DF54F000C6D24C /* ResultManager.swift in Sources */,
+				22B9C71421033AEA00AD8087 /* DecisionViewController.swift in Sources */,
 				22CC0A1720F078D700F75A18 /* HomeViewController.swift in Sources */,
 				22B6AF9420DF553700C6D24C /* Test.swift in Sources */,
 				22BEC82D20F07B65009F7EFE /* ComparisonViewController.swift in Sources */,

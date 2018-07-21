@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComparisonViewController : BaseViewController {
+class ComparisonViewController :  BaseViewController {
     
     @IBOutlet var formulaLabel: UILabel!
     @IBOutlet var responseLabel: UILabel!
@@ -69,7 +69,7 @@ class ComparisonViewController : BaseViewController {
             responseLabel.text = "Correct"
             formulaLabel.text = "\(leftNum) \(input) \(rightNum)"
             
-            perform(#selector(compare), with: nil, afterDelay: 3)
+            perform(#selector(backPage), with: nil, afterDelay: 3)
         } else {
             tryAgain()
             return
@@ -88,6 +88,10 @@ class ComparisonViewController : BaseViewController {
         alertController.addAction(saveAction)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func backPage() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

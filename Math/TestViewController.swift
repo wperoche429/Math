@@ -17,9 +17,9 @@ class TestViewController: BaseViewController {
     @IBOutlet var textLabel: UILabel!
     
     
-    var firstArray = [Int]()
+    var firstArray = [1,2,3,4,5,6,7,8,9,10]
     private let second = [0,1,2,3,4,5,6,7,8,9]
-    var operationArray = [String]()
+    var operationArray = ["+", "-", "x"]
     
     var randomFirst = [Int]()
     var randomSecond = [Int]()
@@ -131,7 +131,7 @@ class TestViewController: BaseViewController {
         
         if answerValue == result {
             answerLabel.text = "Correct"
-            perform(#selector(nextAction), with: nil, afterDelay: 2)
+            perform(#selector(backPage), with: nil, afterDelay: 2)
         } else {
             tryAgain()
             return
@@ -145,6 +145,10 @@ class TestViewController: BaseViewController {
         randomSecond.remove(at: 0)
         view.endEditing(true)
         
+    }
+    
+    @objc func backPage() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func tryAgain() {
