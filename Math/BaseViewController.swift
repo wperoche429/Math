@@ -19,6 +19,15 @@ class BaseViewController : UIViewController {
         dateFormatter.dateFormat = "dd MMM yyyy"
         timeFormatter.dateFormat = "hh:mm a"
         
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(BaseViewController.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+        
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -535,14 +535,11 @@
                         <viewLayoutGuide key="safeArea" id="v0z-aa-ai0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rJy-Mb-uby">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Check" id="G5h-d4-cJd">
-                                <connections>
-                                    <action selector="checkAction:" destination="LOZ-UC-V3a" id="uIb-L8-vp4"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Result" id="Icz-Kd-Hwk"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Check" id="G5h-d4-cJd">
+                            <connections>
+                                <action selector="checkAction:" destination="LOZ-UC-V3a" id="uIb-L8-vp4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="FL0-Yn-mpl" id="4Oz-6u-0G1"/>
@@ -629,9 +626,7 @@
                         <viewLayoutGuide key="safeArea" id="Ve2-fu-4Pi"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="2hd-Sk-ypY">
-                        <barButtonItem key="rightBarButtonItem" title="Result" id="Ixn-Cr-Usq"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="2hd-Sk-ypY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="formulaLabel" destination="BWX-eR-nlm" id="TiG-at-Yao"/>
