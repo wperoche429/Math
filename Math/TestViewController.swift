@@ -15,14 +15,13 @@ class TestViewController: BaseViewController {
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var answerTextField: UITextField!
     @IBOutlet var textLabel: UILabel!
+    @IBOutlet var operatorLabel: UILabel!
     
     
-    var firstArray = [1,2,3,4,5,6,7,8,9,10]
-    private let second = [0,1,2,3,4,5,6,7,8,9]
     var operationArray = ["+", "-", "x"]
     
-    var randomFirst = [Int]()
-    var randomSecond = [Int]()
+    var randomFirst = 0
+    var randomSecond = 0
     var randomOperator = [String]()
     var formula = ""
     var count = 0
@@ -40,43 +39,44 @@ class TestViewController: BaseViewController {
         date = Date()
         answerTextField.text = ""
         answerLabel.text = ""
-        if randomFirst.count == 0 {
-            randomFirst = firstArray.shuffled()
-        }
-        
-        if randomSecond.count == 0 {
-            randomSecond = second.shuffled()
-        }
-        
         if randomOperator.count == 0 {
             randomOperator = operationArray.shuffled()
         }
         
         formula = ""
+        textLabel.textAlignment = .center
+        operatorLabel.text = ""
+        var display : String?
         switch randomOperator[0] {
         case "+":
-            formula = "\(randomFirst[0]) \(randomOperator[0]) \(randomSecond[0]) ="
+            randomFirst = Int(arc4random_uniform(100))
+            randomSecond = Int(arc4random_uniform(100))
+            formula = "\(randomFirst) \(randomOperator[0]) \(randomSecond) ="
+            textLabel.textAlignment = .right
+            display = "\(randomFirst)\n\(randomSecond)"
+            operatorLabel.text = "+"
         case "-":
-            var high = randomFirst[0]
-            var low = randomSecond[0]
-            
-            if high < low {
-                low = high
-                high = randomSecond[0]
-                
-            }
-            formula = "\(high) \(randomOperator[0]) \(low) ="
-
+            randomFirst = Int(arc4random_uniform(20))
+            randomSecond = Int(arc4random_uniform(UInt32(randomFirst)))
+            textLabel.textAlignment = .right
+            display = "\(randomFirst)\n\(randomSecond)"
+            formula = "\(randomFirst) \(randomOperator[0]) \(randomSecond) ="
+            operatorLabel.text = "-"
         case "x":
-            formula = "\(randomFirst[0]) \(randomOperator[0]) \(randomSecond[0]) ="
-        case "/":
-            let bottom = randomSecond[0] == 0 ? 1 : randomSecond[0]
-            formula = "\(randomFirst[0]) \(randomOperator[0]) \(bottom) ="
+            randomFirst = Int(arc4random_uniform(11))
+            randomSecond = Int(arc4random_uniform(11))
+            formula = "\(randomFirst) \(randomOperator[0]) \(randomSecond) ="
+//        case "/":
+//            let bottom = randomSecond[0] == 0 ? 1 : randomSecond[0]
+//            formula = "\(randomFirst[0]) \(randomOperator[0]) \(bottom) ="
         default:
             formula = ""
         }
         
-        textLabel.text = formula
+        textLabel.text = display ?? formula
+        textLabel.sizeToFit()
+        operatorLabel.font = textLabel.font
+        
         answerTextField.becomeFirstResponder()
         
     }
@@ -98,23 +98,14 @@ class TestViewController: BaseViewController {
         var result = 0
         switch randomOperator[0] {
         case "+":
-            result = randomFirst[0] + randomSecond[0]
+            result = randomFirst + randomSecond
         case "-":
-            var high = randomFirst[0]
-            var low = randomSecond[0]
-            
-            if high < low {
-                low = high
-                high = randomSecond[0]
-                
-            }
-            result = high - low
-            
+            result = randomFirst - randomSecond
         case "x":
-            result = randomFirst[0] * randomSecond[0]
-        case "/":
-            let bottom = randomSecond[0] == 0 ? 1 : randomSecond[0]
-            result = randomFirst[0] / bottom
+            result = randomFirst * randomSecond
+//        case "/":
+//            let bottom = randomSecond[0] == 0 ? 1 : randomSecond[0]
+//            result = randomFirst[0] / bottom
         default:
             result = 0
         }
@@ -142,8 +133,6 @@ class TestViewController: BaseViewController {
             randomOperator.remove(at: 0)
         }
         
-        randomFirst.remove(at: 0)
-        randomSecond.remove(at: 0)
         view.endEditing(true)
         
     }

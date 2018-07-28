@@ -38,7 +38,6 @@ class StartViewController : UIViewController {
         
         
         guard let destination = segue.destination as? TestViewController else { return }
-        destination.firstArray = value
         destination.operationArray = operation
     }
     
