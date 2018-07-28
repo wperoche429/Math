@@ -15,10 +15,10 @@ class ClockViewController : BaseViewController, UITextFieldDelegate {
     @IBOutlet var answerTextField: UITextField!
     @IBOutlet var answerLabel: UILabel!
     
-    let minutes = [0,5,10,15,20,25,30,25,40,45,50,55]
+    let minutes = [0,15,30]
     let hours = [1,2,3,4,5,6,7,8,9,10,11,12]
     var answer = ""
-    let mode = [0,1,0,1,0,1,0,1,0,1,0,1,0,0,0,1,1,1,1,1,0,1,0,0,1,1]
+    let mode = [0,0]
     var currentMode = 0
     var currentHour = 0
     var currentMinute = 0

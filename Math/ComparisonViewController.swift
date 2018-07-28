@@ -93,7 +93,7 @@ class ComparisonViewController :  BaseViewController {
     
     @objc func backPage() {
         count += 1
-        if count == 5 {
+        if count == 3 {
             self.navigationController?.popViewController(animated: true)
         } else {
             self.compare()
